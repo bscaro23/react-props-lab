@@ -1,5 +1,18 @@
 import './Nav.css'
-import SubMenu from '../SubMenu/SubMenu';
+import Trigger from '../Trigger/Trigger';
+
+//Example prop
+
+const aboutLinks = [
+    {
+        title: 'The Show',
+        link: './the-show',
+    },
+    {
+        title: 'History',
+        link: './history',
+    }
+]
 
 export default function Nav(props) {
     return(
@@ -20,7 +33,7 @@ export default function Nav(props) {
                     <div className="right-upper-nav">
                         <ul className="cover-contact-about">
                             <li className="trigger"><a href="/#">VISIT SPRINGFIELD!</a></li>
-                            <SubMenu/>
+                            <Trigger/>
                         </ul>
                         <button className="btn-donate">DONATE</button>
                     </div>
@@ -29,12 +42,12 @@ export default function Nav(props) {
 
             <div className="lower-nav">
                 <ul className="lower-nav-ul">
-                    <SubMenu link={'about'}/>
-                    <SubMenu/>
-                    <SubMenu/>
-                    <SubMenu/>
-                    <SubMenu/>
-                    <SubMenu/>
+                    <Trigger menuItem={'ABOUT'} linkItems={aboutLinks}/>
+                    <Trigger/>
+                    <Trigger/>
+                    <Trigger/>
+                    <Trigger/>
+                    <Trigger/>
                     <i className="fa fa-search"></i>            
                 </ul>
             </div>
